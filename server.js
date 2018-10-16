@@ -13,7 +13,6 @@ app.use(bodyParser.json())
 app.get("/", (req, res, next) => {
 	var date = new Date().toISOString()
 	console.log('sending date: ', date)
-	throw new Error('crashing')
 	res.end(date)
 })
 

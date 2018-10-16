@@ -11,8 +11,9 @@ app.use(bodyParser.json())
 
 // Default root route
 app.get("/", (req, res, next) => {
-	// res.send('OK')
-	res.end(new Date().toISOString())
+	var date = new Date().toISOString()
+	console.log('sending date: ', date)
+	res.end(date)
 })
 
 const startServer = async () => {
@@ -22,3 +23,4 @@ const startServer = async () => {
 }
 
 startServer()
+

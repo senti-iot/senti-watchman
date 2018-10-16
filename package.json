@@ -15,9 +15,9 @@
     "Senti",
     "Senti.Cloud",
     "IoT",
-	"MQTT",
-	"Watchman",
-	"Express"
+    "MQTT",
+    "Watchman",
+    "Express"
   ],
   "author": "Christian Broberg",
   "license": "MIT",
@@ -29,6 +29,8 @@
     "body-parser": "^1.18.3",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
+    "mqtt": "^2.18.8",
+    "systemctl": "^0.2.2",
     "util": "^0.11.0"
   }
 }

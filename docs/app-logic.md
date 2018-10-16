@@ -12,15 +12,4 @@
 	- On MQTT receive update - check version -> do update client - set client update flag
 	- Restart systemd "senti-mqtt-client" service
 
-```sh
-
-sudo systemctl start senti-watchman.service
-sudo systemctl restart senti-watchman.service
-systemctl status senti-watchman.service
-curl http://localhost:3000/
-sudo systemctl stop senti-watchman.service
-journalctl -f -u senti-watchman.service
-systemctl daemon-reload
-
-```
 

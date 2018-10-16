@@ -1,11 +1,11 @@
 {
   "name": "senti-watchman",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Senti Watchman is a sentinel service that monitors the senti-mqtt-client and update/restart the client when needed",
   "main": "server.js",
   "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,12 +15,20 @@
     "Senti",
     "Senti.Cloud",
     "IoT",
-    "MQTT"
+	"MQTT",
+	"Watchman",
+	"Express"
   ],
   "author": "Christian Broberg",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/senti-platform/senti-watchman/issues"
   },
-  "homepage": "https://github.com/senti-platform/senti-watchman#readme"
+  "homepage": "https://github.com/senti-platform/senti-watchman#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "util": "^0.11.0"
+  }
 }

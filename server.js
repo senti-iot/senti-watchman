@@ -7,8 +7,8 @@ var watcher = require('chokidar')
 
 var chokidar = require('chokidar');
 
-chokidar.unwatch('./')
-chokidar.close()
+// chokidar.unwatch('./')
+// chokidar.close()
 
 // One-liner for current directory, ignores .dotfiles
 chokidar.watch('./', { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {

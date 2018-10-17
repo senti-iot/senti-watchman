@@ -26,5 +26,6 @@ else
 	sudo systemctl enable $service_name
 	sudo systemctl daemon-reload
 	echo "Starting $service_name ..."
+	sudo systemctl stop $service_name
 	sudo systemctl start $service_name
 fi 

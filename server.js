@@ -15,7 +15,10 @@ var watcher = chokidar.watch('.', {
 	persistent: true
 })
 
-watcher.on('all', path => { updateClient() })
+watcher.on('all', (event, path) => { 
+	console.log(event, path)
+	updateClient()
+})
 
 /* // One-liner for current directory, ignores .dotfiles
 chokidar.watch('./', { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {

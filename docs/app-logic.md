@@ -8,7 +8,7 @@
 	- Check for updates - get version (self) -> do update self (-t sensor/update -m self/client)
 	- 
 - Connect
-- Run
+- Run (Eventlistener)
 	- First run: Initial check for client updates -> do update client
 	- On MQTT receive update - check version -> do update client - set client update flag
 	- Restart systemd "senti-mqtt-client" service

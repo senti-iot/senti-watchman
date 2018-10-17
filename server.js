@@ -18,17 +18,21 @@ app.get("/", (req, res, next) => {
 	res.end(date)
 })
 
+const watchAndRestart = () => {
+	// One-liner for current directory, ignores .dotfiles
+	console.log('Now watching *.*')
+	
+	watcher.watch('./*', { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {
+		console.log(event, path)
+		systemctl.restart('senti-watchman.service').then(output => console.log)
+	})
+}
+
 const startServer = async () => {
 	const port = process.env.SERVER_PORT || 3000
 	await promisify(app.listen).bind(app)(port)
 	console.log(`Senti Watchman Server listening on port ${port}`)
+	watchAndRestart()
 }
 
 startServer()
-
-
-// One-liner for current directory, ignores .dotfiles
-watcher.watch('./*', { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {
-	console.log(event, path)
-	systemctl.restart('senti-watchman.service').then(output => console.log)
-})

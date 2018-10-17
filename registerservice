@@ -1,8 +1,6 @@
 #!/bin/bash
 
 clear
-sudo -i
-clear
 
 service_name=senti-watchman.service
 service_dir=/etc/systemd/system

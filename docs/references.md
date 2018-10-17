@@ -11,6 +11,8 @@ https://hackernoon.com/making-node-js-service-always-alive-on-ubuntu-server-e20c
 
 https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units
 
+https://superuser.com/questions/1171751/restart-systemd-service-automatically-whenever-a-directory-changes-any-file-ins
+
 ## SystemD commands
 ```sh
 

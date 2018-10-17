@@ -10,6 +10,7 @@ var chokidar = require('chokidar');
 // One-liner for current directory, ignores .dotfiles
 chokidar.watch('./', { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {
 	console.log(event, path)
+	systemctl.restart('senti-watchman.service').then(output => console.log)
 })
 
 const app = express()

@@ -5,6 +5,13 @@ const { promisify } = require('util')
 var systemctl = require('systemctl')
 var watcher = require('chokidar')
 
+var chokidar = require('chokidar');
+
+// One-liner for current directory, ignores .dotfiles
+chokidar.watch('.', { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {
+	console.log(event, path)
+})
+
 const app = express()
 
 app.use(bodyParser.json())

@@ -5,7 +5,9 @@ systemctl.isEnabled('senti-watchman.service').then(enabled => {
 })
 
 // Start a service
-systemctl.start('senti-watchman.service').then(output => console.log)
+// systemctl.start('senti-watchman.service').then(output => console.log)
+
+systemctl.restart('senti-watchman.service').then(output => console.log)
 
 /*
 Services:

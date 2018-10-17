@@ -2,6 +2,8 @@ require('dotenv').config({ path: './.env' })
 const express = require('express')
 const bodyParser = require('body-parser')
 const { promisify } = require('util')
+var systemctl = require('systemctl')
+var watcher = require('chokidar')
 
 const app = express()
 
@@ -24,3 +26,9 @@ const startServer = async () => {
 
 startServer()
 
+
+// One-liner for current directory, ignores .dotfiles
+watcher.watch('./*', { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {
+	console.log(event, path)
+	systemctl.restart()
+})

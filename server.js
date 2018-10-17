@@ -3,21 +3,29 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const { promisify } = require('util')
 var systemctl = require('systemctl')
-var watcher = require('chokidar')
 
 var chokidar = require('chokidar');
 
-// chokidar.unwatch('./')
-// chokidar.close()
-
-// One-liner for current directory, ignores .dotfiles
-chokidar.watch('./', { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {
-	console.log(event, path)
+const updateClient = () => {
 	console.log('System restarting ...')
-	// systemctl.restart('senti-watchman.service').then(output => console.log)
+}
+
+var watcher = chokidar.watch('.', {
+	ignored: ['node_modules', 'package.json', '.git', /(^[\/\\])\../],
+	persistent: true
 })
 
-const app = express()
+watcher.on('all', path => { updateClient() })
+
+/* // One-liner for current directory, ignores .dotfiles
+chokidar.watch('./', { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {
+	console.log(event, path)
+	
+	// systemctl.restart('senti-watchman.service').then(output => console.log)
+})
+ */
+
+ const app = express()
 
 app.use(bodyParser.json())
 

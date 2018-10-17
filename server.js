@@ -21,7 +21,6 @@ app.get("/", (req, res, next) => {
 const watchAndRestart = () => {
 	// One-liner for current directory, ignores .dotfiles
 	console.log('Now watching *.*')
-	
 	watcher.watch('./*', { ignored: /(^|[\/\\])\../ }).on('all', (event, path) => {
 		console.log(event, path)
 		systemctl.restart('senti-watchman.service').then(output => console.log)

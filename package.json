@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/senti-platform/senti-watchman#readme",
   "dependencies": {
+    "apisauce": "^1.0.0",
     "body-parser": "^1.18.3",
     "chokidar": "^2.0.4",
     "dotenv": "^6.1.0",

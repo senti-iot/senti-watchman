@@ -36,3 +36,16 @@ sudo journalctl -u senti-watchman.service -p err
 ## Monitor changes on files/directories
 https://github.com/paulmillr/chokidar
 
+## .env
+
+The most common way to set environment variables is by declaring them in our .bash_profile file.
+
+Like this:
+
+export SERVER_PORT=3001
+export API_URL='https://someendpointurl.com'
+
+
+var port = process.env.SERVER_PORT
+var api = process.env.API_URL
+

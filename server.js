@@ -1,9 +1,12 @@
 const watch = require('./lib/watch')
 const startServer = require('./lib/startserver')
-const eventListener = require('./lib/eventlistener')
+const serviceProcess = require('./lib/serviceprocess')
 
+// Set up file watching
 watch()
 
+// Start express server and local endpoints
 startServer()
 
-eventListener()
+// Run primary processes
+serviceProcess()

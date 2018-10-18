@@ -1,6 +1,6 @@
 {
   "name": "senti-watchman",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Senti Watchman is a sentinel service that monitors the senti-mqtt-client and update/restart the client when needed",
   "main": "server.js",
   "scripts": {

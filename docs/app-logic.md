@@ -11,12 +11,28 @@
 - Connect
 - Run (Service Process)
 	- First run: Initial check for client updates -> do update client
+	- Watch - for file changes (phone home with changes if API says go)
 	- On MQTT receive update - check version -> do update client - set client update flag
 	- Restart systemd "senti-mqtt-client" service
 
-### Options API object
+- Production build (webpack 4)
+	- check codetemp/webpack-4
 
-versions (semver):
-API version
-Watchman version
-MQTT Client version
+### Options
+
+- MQTT options
+- versions (semver):
+	- API version
+	- Watchman version
+	- MQTT Client version
+watchchanges = boolean
+mqtt_auth = jwt/user/pass
+
+### modules -> npm packages
+What code/modules to put into resuable npm packages for use in other apps?
+
+senti-tools/senti-device
+- version.js
+- watch.js / ignore.js
+- apierrorhandler.js -> apisauce-error
+- rpi-detect

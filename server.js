@@ -2,6 +2,7 @@ const watch = require('./lib/watch')
 const startServer = require('./lib/startserver')
 const serviceProcess = require('./lib/serviceprocess')
 
+
 // Set up file watching
 watch()
 

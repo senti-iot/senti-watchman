@@ -7,13 +7,18 @@ PATH: /srv/nodejs/senti/senti-watchman
 
 - init 
 	- Get options from API
-		- If options/api not responding try api2, else send mqttApiAlert
-	- Check for updates - get version (self) -> do update self (-t sensor/update -m self/client)
-	- 
-- Connect
+		- API not responding try API2
+		- Try again in 30 sec (N times), else send mqttApiAlert
+		- Fallback 2 - get config through MQTT
+		- Return config object
+
+- Watch - for file changes (phone home with changes if API says go)
+ 
+- Start Server 
+
 - Run (Service Process)
 	- First run: Initial check for client updates -> do update client
-	- Watch - for file changes (phone home with changes if API says go)
+	- Check for updates - get version (self) -> do update self (-t sensor/update -m self/client)
 	- On MQTT receive update - check version -> do update client - set client update flag
 	- Restart systemd "senti-mqtt-client" service
 

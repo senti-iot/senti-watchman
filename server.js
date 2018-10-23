@@ -4,17 +4,17 @@ const startServer = require('./lib/startserver')
 const serviceProcess = require('./lib/serviceprocess')
 
 const server = async () => {
-	let container = await init()
-	// console.log(container)
+	// Get config from API + init MQTT connection
+	let initObj = await init()
 	
 	// Start express server and local endpoints
-	await startServer(container.config.server)
+	await startServer(initObj.config.server)
 
 	// Set up file watching
-	await watch(container.config.watch)
+	await watch(initObj.config.watch)
 	
 	// Run primary processes
-	await serviceProcess(container)
+	await serviceProcess(initObj)
 }
 
 server()

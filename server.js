@@ -3,18 +3,18 @@ const watch = require('./lib/watch')
 const startServer = require('./lib/startserver')
 const serviceProcess = require('./lib/serviceprocess')
 
-
 const server = async () => {
-	let config = await init()
+	let container = await init()
+	// console.log(container)
 	
 	// Start express server and local endpoints
-	await startServer(config.server)
+	await startServer(container.config.server)
 
 	// Set up file watching
-	await watch(config.watch)
+	await watch(container.config.watch)
 	
 	// Run primary processes
-	await serviceProcess(config.services)
+	await serviceProcess(container)
 }
 
 server()

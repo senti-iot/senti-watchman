@@ -1,6 +1,6 @@
 {
   "nae": "senti-watchman",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Senti Watchman is a sentinel service that monitors the senti-mqtt-client and update/restart the client when needed",
   "main": "server.js",
   "scripts": {

@@ -9,7 +9,7 @@
 - senti/sensor/type/id/temperature
 ...
 - senti/sensor/sentiwi/8020/cmd 
-	- /service (update, restart, start, stop)
+	- /daemonservice (update, restart, start, stop)
 	- /device (shutdown, reboot)
 - senti/sensor/sentiwi/8020/data
 - senti/sensor/sentiwi/8020/status
@@ -30,7 +30,7 @@
 
 - senti/services/type/id/ (root)
 - senti/services/watchman/8020/cmd
-	- /service (update, restart, start, stop)
+	- /daemonservice (update, restart, start, stop)
 	- /device (shutdown, reboot)
 - senti/services/watchman/8020/status
 - senti/services/api/hive/status
@@ -39,7 +39,8 @@
 	- /device (shutdown, reboot)
 - senti/services/api/moseisley/status
 
-## Topics Update Hierarchy
-- senti/services/watchman/update
-- senti/services/mqttclient/update
-	- cmds: 'now' = 0, 60, 3600, * 1000 
+## Topics Update Hierarchy for dispatcher
+- senti/services/watchman/update (broadcast update)
+- senti/services/mqttclient/update (broadcast update)
+	- cmd: 'now' = 0, 60, 3600, seconds (* 1000)
+

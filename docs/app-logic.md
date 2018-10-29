@@ -22,6 +22,9 @@ PATH: /srv/nodejs/senti/senti-watchman
 	- On MQTT receive update - check version -> do update client - set client update flag
 	- Restart systemd "senti-mqtt-client" service
 
+## Todo
+- Spool out data / Persist in db or txt-file
+
 ### Options
 
 - MQTT options

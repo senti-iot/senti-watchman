@@ -27,6 +27,7 @@
   "homepage": "https://github.com/senti-platform/senti-watchman#readme",
   "dependencies": {
     "apisauce": "^1.0.0",
+    "async-mqtt": "^2.0.0",
     "body-parser": "^1.18.3",
     "child-process-promise": "^2.2.1",
     "chokidar": "^2.0.4",

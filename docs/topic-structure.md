@@ -29,15 +29,19 @@
 ## Topics Services Hierarchy
 
 - senti/services/type/id/ (root)
-- senti/services/watchman/8020/cmd
+- senti/services/type/id/cmd
 	- /daemonservice (update, restart, start, stop)
 	- /device (shutdown, reboot)
+- senti/services/type/id/status
+- senti/services/type/id/data
+
+Examples: 
 - senti/services/watchman/8020/status
-- senti/services/api/hive/status
-- senti/services/api/hive/cmd
+- senti/services/api/hive.senti.cloud/status
+- senti/services/api/hive.senti.cloud/cmd
 	- /service (update, restart, start, stop)
 	- /device (shutdown, reboot)
-- senti/services/api/moseisley/status
+- senti/services/api/moseisley.webhouse.net/status
 
 ## Topics Update Hierarchy for dispatcher
 - senti/services/watchman/update (broadcast update)

@@ -8,6 +8,7 @@
 - Microservices Intercom (using MQTT or REST)
 - getTopic(state/data/cmd/update) return full topic path
 - MQTT API Alert (mqttapialert.js)
+- Version auto update if new version available (config.versions.autoupdate)
 
 
 ## Doing

@@ -1,7 +1,7 @@
 # Senti Watchman Todo
 
 ## Todo
-- Update Watchman (self)/Client
+- Update Client
 - Check if service is running, enabled
 - Restart services
 - Spool / Persist in DB or JSON-file
@@ -11,6 +11,9 @@
 
 
 ## Doing
+- updateFuture
+- scheduledUpdate
 
 
 ## Done
+- Update Watchman (self)

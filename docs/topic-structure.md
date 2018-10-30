@@ -6,7 +6,6 @@
 - senti/sensor/type/id/status (LWT topic)
 - senti/sensor/type/id/data
 - senti/sensor/type/id/cmd
-- senti/sensor/type/id/temperature
 ...
 - senti/sensor/sentiwi/8020/cmd 
 	- /daemonservice (update, restart, start, stop)

@@ -1,7 +1,7 @@
 const init = require('./lib/init')
-const watch = require('./lib/watch')
-const startServer = require('./lib/startserver')
-const serviceProcess = require('./lib/serviceprocess')
+const watch = require('./lib/watch/watch')
+const startServer = require('./lib/server/startserver')
+const serviceProcess = require('./lib/service/serviceprocess')
 
 const server = async () => {
 	// Get config from API + init MQTT connection

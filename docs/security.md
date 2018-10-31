@@ -25,3 +25,13 @@
 - https://github.com/mqttjs/MQTT.js/blob/master/examples/tls%20client/mqttclient.js
 - https://github.com/mqttjs/MQTT.js/blob/master/examples/client/secure-client.js
 - https://github.com/mcollina/mosca/blob/master/examples/secure/secureClient.js 
+
+## Mosquitto topic restrictions (ACL)
+- http://www.steves-internet-guide.com/topic-restriction-mosquitto-configuration/
+- http://www.steves-internet-guide.com/mqtt-username-password-example/
+
+## Github Webhook simple token security
+- https://developer.github.com/webhooks/securing/ 
+- https://github.com/digidem/github-webhook-middleware
+- https://www.npmjs.com/package/verify-github-webhook (45)
+

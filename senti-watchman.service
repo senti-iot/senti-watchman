@@ -1,6 +1,6 @@
 [Unit]
 # senti-watchman.service
-Description=Senti Watchman monitors/updates Senti MQTT Client
+Description=Senti Watchman
 Documentation=https://github.com/senti-platform/senti-watchman/blob/master/README.md
 # After=network.target
 

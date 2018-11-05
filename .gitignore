@@ -38,4 +38,3 @@ node_modules/
 /.idea
 /.vscode
 senti-watchman-workspace*
-package-lock.json

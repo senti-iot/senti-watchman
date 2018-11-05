@@ -1,6 +1,6 @@
 {
-  "nae": "senti-watchman",
-  "version": "0.0.14",
+  "name": "senti-watchman",
+  "version": "0.0.15",
   "description": "Senti Watchman is a sentinel service that monitors the senti-mqtt-client and update/restart the client when needed",
   "main": "server.js",
   "scripts": {
@@ -38,7 +38,7 @@
     "helmet": "^3.14.0",
     "ini": "^1.3.5",
     "mqtt": "^2.18.8",
-    "simple-git": "^1.106.0",
-    "util": "^0.11.0"
+    "simple-git": "^1.107.0",
+    "util": "^0.11.1"
   }
 }

@@ -3,10 +3,10 @@ const watch = require('./lib/watch/watch')
 const startServer = require('./lib/server/startserver')
 const serviceProcess = require('./lib/service/serviceprocess')
 
-console.log('')
-console.log('')
+console.log(' ')
+console.log(' ')
 console.log('************* SENTI WATCHMAN ************* ')
-console.log('')
+console.log(' ')
 
 const server = async () => {
 	// Get config from API + init MQTT connection

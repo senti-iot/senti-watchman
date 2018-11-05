@@ -4,7 +4,7 @@
 - Check if service is running, enabled
 - Restart services
 - Spool / Persist in DB or JSON-file
-- Microservices Intercom (using MQTT or REST)
+- Microservices Intercom (using MQTT)
 - getTopic(state/data/cmd/update) return full topic path
 - MQTT API Alert (mqttapialert.js)
 - Version auto update if new version available (config.versions.autoupdate)

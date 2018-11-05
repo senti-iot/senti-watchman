@@ -5,6 +5,8 @@ const serviceProcess = require('./lib/service/serviceprocess')
 
 console.log('')
 console.log('')
+console.log('************* SENTI WATCHMAN ************* ')
+console.log('')
 
 const server = async () => {
 	// Get config from API + init MQTT connection

@@ -1,36 +1,46 @@
+# SystemD
+
 ### srv.service
 
 [Unit]
-Description=srv 0.1: Service's description
-After=network.target
+# senti-api.service
+Description=Senti API
+Documentation=https://github.com/senti-platform/senti-api/blob/master/README.md
 
 [Service]
+WorkingDirectory=/srv/nodejs/senti/senti-api
+ExecStart=/usr/bin/node server.js
 Type=simple
-WorkingDirectory=/opt/srv
-ExecStart=/opt/srv/bin/srv
+Restart=always
+# RestartSec=1
+StartLimitInterval=0
 User=root
 Group=root
+# KillSignal=SIGQUIT
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=basic.target
 
-### srv-watcher.service
+### senti-api-watcher.service
 
 [Unit]
-Description=srv restarter
+Description=senti-api restarter
 After=network.target
 
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/systemctl restart srv.service
+# this could be a bash script with npm install and other cleaning ... 
 
 [Install]
 WantedBy=multi-user.target
 
-### srv-watcher.path
+### senti-api-watcher.path
 
 [Path]
-PathModified=/opt/srv/lib
+PathModified=/srv/nodejs/senti/senti-api
 
 [Install]
 WantedBy=multi-user.target
+
+- https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files

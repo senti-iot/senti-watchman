@@ -44,3 +44,4 @@ PathModified=/srv/nodejs/senti/senti-api
 WantedBy=multi-user.target
 
 - https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files
+- https://nodesource.com/blog/running-your-node-js-app-with-systemd-part-1/ 

@@ -1,7 +1,8 @@
 # Senti Watchman Todo
 
 ## Todo
-- Check if service is running, enabled
+- Fetch / curl zip packed builds to exclude Git pull which could produce errors
+- Check if service is running, enabled (if not start service)
 - Restart services
 - Spool / Persist in DB or JSON-file
 - Microservices Intercom (using MQTT)

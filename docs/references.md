@@ -19,6 +19,7 @@ https://superuser.com/questions/1171751/restart-systemd-service-automatically-wh
 sudo systemctl start senti-watchman.service
 sudo systemctl restart senti-watchman.service
 sudo systemctl status senti-watchman.service
+sudo systemctl status senti-api.service
 curl http://localhost:3000/
 sudo systemctl stop senti-watchman.service
 sudo journalctl -f -u senti-watchman.service
